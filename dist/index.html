@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Finance - Logger</title>
+  </head>
+
+  <body class="w-screen h-auto">
+    <div
+      class="wrapper text-center text-amber-700 bg-black tracking-widest contrast-100"
+    >
+      <h1 class="text-xl md:text-5xl md:font-bold md:p-10 p-5">
+        Finance Logger
+      </h1>
+
+      <!-- output list -->
+    </div>
+    <main class="">
+      <form class="new-item-form">
+        <section class="form py-10 grid md:flex text-center tracking-wider">
+          <div class="field p-3">
+            <label class="text-amber-600">Transaction Type:</label>
+            <select class="border-4 rounded-md p-1 m-3" id="type">
+              <option value="" disabled>Select your option</option>
+              <option value="invoice">Invoice</option>
+              <option value="payment">Payment</option>
+            </select>
+          </div>
+          <div class="field md:p-3">
+            <label class="text-amber-600">To / From:</label>
+            <input
+              class="border-4 rounded-md p-1 m-3"
+              type="text"
+              id="tofrom"
+              placeholder="Name of the person"
+            />
+          </div>
+          <div class="field md:p-3">
+            <label class="text-amber-600">Details:</label>
+            <select class="border-4 rounded-md p-1 m-3" id="details">
+              <option value="" disabled>Select</option>
+              <option value="Travel-Fees">Travel</option>
+              <option value="Scholarship-Program">Scholarship</option>
+              <option value="Allowance">Allowance</option>
+            </select>
+          </div>
+          <div class="field md:p-3">
+            <label class="text-amber-600">Amount (Php):</label>
+            <input
+              class="border-4 rounded-md p-1 m-3"
+              type="number"
+              id="amount"
+              placeholder="Php 20,000"
+            />
+          </div>
+        </section>
+        <div class="text-right w-screen pr-10">
+          <button
+            class="btn bg-green-500 p-2 px-10 rounded-lg text-white tracking-widest"
+            id="clear"
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn bg-orange-500 p-2 px-10 rounded-lg text-white tracking-widest"
+            type="submit"
+          >
+            Add
+          </button>
+        </div>
+      </form>
+      <!-- <ul class="item-list p-10 mx-10"> -->
+      <div class="list border-l-8 w-full h-auto text-center"></div>
+      <!-- </ul> -->
+      <!--  TABLE SAMPLE  -->
+      <section class="w-full p-1 md:p-10 md:flex grid">
+        <table class="table-auto w-full text-left">
+          <thead class="text-orange-500 bg-black/90 font-serif tracking-widest">
+            <tr class="">
+              <th class="p-2">Type</th>
+              <th class="p-2">To/From</th>
+              <th class="p-2">Details</th>
+              <th class="p-2">Amount</th>
+              <th class="p-2 text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody
+            class="bg-slate-300 text-black tbody font-thin tracking-widest"
+          ></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script type="module" src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
