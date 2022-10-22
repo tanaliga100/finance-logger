@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item-list {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.btn-action-edit {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 1px;
+  border-radius: 5px;
+  color: orange;
+  font-weight: 300;
+}
+.btn-action-del {
+  border: 1px solid red;
+  padding: 3px;
+  border-radius: 5px;
+  color: orange;
+  font-weight: 300;
+}
+td {
+  padding: 2px 0px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+}
